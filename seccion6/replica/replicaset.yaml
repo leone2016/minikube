@@ -1,0 +1,24 @@
+apiVersion: apps/v1 #kubectl app-resources, buscar replicaset y en APIGROUP esta **apps**  y en pod no hay api group por ese motivo se pone **v1**
+kind: ReplicaSet ## kubectl app-resources, buscar replicaset  y en KIND esta **ReplicaSet** 
+metadata:
+  name: rs-test
+  labels:
+    app: rs-test
+spec:
+  # modifica las réplicas según tu caso de uso
+  replicas: 5  # 5 replicas de un mismo pod 
+  selector: # -------
+    matchLabels:
+      app: pod-label # label por el cual replicaset crea un pod  
+  template: ## de aqui hacia abajo hace referencia al pod ________
+    metadata:
+      labels:
+        app: pod-label # mismo que selector  
+    spec: 
+      containers:
+      - name: cont1
+        image: python:3.6-alpine
+        command: ['sh', '-c', 'echo cont1 > index.html && python -m http.server 8081 ']
+      - name: cont2
+        image: python:3.6-alpine
+        command: ['sh', '-c', 'echo  cont2 > index.html && python -m http.server 8082 '] 

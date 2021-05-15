@@ -1,0 +1,19 @@
+# Manifiesto de K8
+apiVersion: v1 # kubectl api-versions (APIGROUP ejecutar _>  kubectl api-resources )
+kind: Pod # kubectl api-resources , mirar en la columna kind
+metadata:
+  name: podtest2 # nombre del pod 
+spec:
+  containers:
+  - name: hello
+    image: nginx:alpine
+# --- separacion necesaria 
+---
+apiVersion: v1 # kubectl api-versions (APIGROUP ejecutar _>  kubectl api-resources )
+kind: Pod # kubectl api-resources , mirar en la columna kind
+metadata:
+  name: podtest3 # nombre del pod 
+spec:
+  containers:
+  - name: helloworld
+    image: nginx:alpine

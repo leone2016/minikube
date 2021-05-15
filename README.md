@@ -43,10 +43,12 @@ command  | Explanation
 `kubectl exec -ti <namepod> -- sh ` | ingresa a los contenedores dentro de un pod, ingresa al terminal de nginx alpine
 `kubectl logs <namepod> -f ` | con **-f** es persistir los logs
 
+  
 
-### Manifiesto de Kubernetes
-* cuando se habla de un manifiesto es un archivo en yaml, define el recurso que queremos crear o actualizar en K8
-* Por qué utilizar manifiestos en vez de linea de comandos ? 
-    * imaginemos que tenemos que crear 50 pods individuales, tendriamos que ejecutar kubectl run 50 veces y si quisieramos eliminarlos se tendria que ejecutar `kubectl delete ...` 50 veces
-    * no es recomendable crear los pods manualmente, ya que no se tiene un buen control de los recursos que estan creados 
-    * es complicado la administración individual  
+## DOCKER
+* `docker run --net host -ti python:3.6-alpine sh`| ejecuta un contenedor en docker, en la red de host (-ti)  iterativamente, (sh) ingresa a la terminal
+* | con el paso anterior, ingresa a la terminal 
+
+
+## LINUX
+* `apk add -U curl` | instala curl en el caso que no este instalado
