@@ -1,0 +1,25 @@
+## kubectl api-resources permite entender lo que va en el yaml
+# DEPLOYMENT
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-test
+  labels:
+    app: front
+# REPLICASET
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: front # label que el replica set va utilizar para encontrar a los pods
+  # POD
+  template:
+    metadata:
+      labels:
+        app: front # debe ser igual a matchLabels -> app del replicaset
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
