@@ -64,3 +64,18 @@ El nodePort es una exposición del servicio por medio  de un puerto en el nodo
 command  | Explanation 
 ------------- | -------------
 `kubectl apply -f seccion8/servicios/nodeport.yaml` | en ese archivo se encuentra el service:NODEPORT -> deployment -> replica -> pod
+
+
+### LoadBalancer
+
+>  solo crean balanceadores externos, no se puede replicar en la terminar
+
+nodo lo que hace un tipo de servicio de los balances es efectivamente provisionar un balanceador de
+carga en el cloud que nosotros hayamos definido luego de aprovisionar automáticamente este balanceador
+es decir crearlo en la nube automáticamente lo que va a pasar es que se van a abrir NodePort en cada
+nodo para que el usuario pueda acceder al balanceador y una vez acceda al balanceador el balanceador
+va a acceder al NODEport y una vez accedamos al output vamos a poder acceder al ClusterIp  y una
+vez accedamos el ClusterIp ahí vamos a poder acceder a los PODS que están siendo observados por ese servicio.
+
+Recordemos que estos pots deben estar administrados por algún tipo de controlador conDEPLOYMENT o REPLICASET
+

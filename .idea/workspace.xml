@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="53cd7fa0-076e-4c57-955c-472361e0a3cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seccion7/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/seccion7/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seccion8/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/seccion8/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -21,11 +22,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/seccion8/servicios" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/session9/backend/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/seccion8/servicios" />
     </key>
@@ -39,7 +45,9 @@
       <option name="presentableId" value="Default" />
       <updated>1621071485536</updated>
       <workItem from="1621071487503" duration="2194000" />
-      <workItem from="1621076935758" duration="7922000" />
+      <workItem from="1621076935758" duration="7947000" />
+      <workItem from="1621329095239" duration="5836000" />
+      <workItem from="1621419502433" duration="434000" />
     </task>
     <servers />
   </component>
@@ -51,5 +59,9 @@
       <screen x="0" y="0" width="2048" height="1280" />
     </state>
     <state x="483" y="230" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1280@0.0.2048.1280" timestamp="1621180986612" />
+    <state x="603" y="245" width="840" height="1034" key="search.everywhere.popup" timestamp="1621333222661">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state x="603" y="245" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1280@0.0.2048.1280" timestamp="1621333222661" />
   </component>
 </project>
