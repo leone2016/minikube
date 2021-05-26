@@ -3,6 +3,9 @@
 > `minikube start`
 > `minikube stop`
 > `minikube status`
+> `minikube ssh` dentro del minikube se puede ver las imagenes creadas desde Docker
+    *  eval $(minikube docker-env)
+
 
 
 ### Explorando Pods

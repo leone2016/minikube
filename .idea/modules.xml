@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Kubernetes.iml" filepath="$PROJECT_DIR$/.idea/Kubernetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../usrv_node/.idea/backEnd.iml" filepath="$PROJECT_DIR$/../usrv_node/.idea/backEnd.iml" />
     </modules>
   </component>
 </project>

@@ -19,7 +19,7 @@ command  | Explanation
 `kubectl get pods` | ...
 `kubectl logs doscont` | ingresa a los logs del pod, en este caso se llama doscont, igual al ejempo del yaml,  `seccion5/pod/doscontenedores.yaml`
 `kubectl logs doscont -c` | si el pod tiene mas de un contenedor, es necesario especificar (-c) que contenedor se desea ver los logs
-`kubectl exec -ti doscont -c cont1 -- sh ` | ingresa a al contenedor de un pod, en el caso que el tenga varios contenedores es necesario eso especificar a cual se desea ingresar
+`kubectl exec -ti doscont -c cont1 -- sh ` | ingresa al contenedor de un pod, en el caso que el tenga varios contenedores es necesario eso especificar a cual se desea ingresar
 
 ## Labels
 `seccion5/pod/label.yaml`

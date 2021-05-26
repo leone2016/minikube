@@ -17,6 +17,11 @@ type HandsOn struct{
 type server struct{}
 
 func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+
+    if r.URL.Path != "/" {
+        http.NotFound(w, r )
+        return
+    }
     w.WriteHeader(http.StatusOK)
     w.Header().Set("Content-Type", "application/json")
     resp := HandsOn{
@@ -34,5 +39,5 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
     s := &server{}
     http.Handle("/", s)
-    log.Fatal(http.ListenAndServe(":9092", nil))
+    log.Fatal(http.ListenAndServe(":9090", nil))
 }
