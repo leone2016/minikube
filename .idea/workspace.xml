@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53cd7fa0-076e-4c57-955c-472361e0a3cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kubectl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session9/OLDDockerfileOLD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session9/backend/backend.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/comments-depl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/query-depl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Kubernetes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kubernetes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/session9/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/session9/printScreen/seccion9-intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/moderation-depl.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seccion5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/seccion5/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/session9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/session9/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/session9/backend/src/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/session9/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/session9/backend/src/app" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/session9/backend/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/session9/backend/src/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/comments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/comments/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/moderation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/moderation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/query/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/query/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/event-bus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/event-bus/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/comments-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/comments-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/query-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/query-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/query/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/query/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/query/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/query/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +22,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../usrv_node" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -53,7 +46,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
@@ -69,6 +62,11 @@
       <recent name="$PROJECT_DIR$/../usrv_node/seccion-4" />
       <recent name="$PROJECT_DIR$/session9/backend/src" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm install" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,7 +90,10 @@
       <workItem from="1621878553086" duration="599000" />
       <workItem from="1621881134294" duration="634000" />
       <workItem from="1621907857032" duration="23914000" />
-      <workItem from="1622020880351" duration="1050000" />
+      <workItem from="1622020880351" duration="3679000" />
+      <workItem from="1622035438651" duration="1412000" />
+      <workItem from="1622113597348" duration="11418000" />
+      <workItem from="1622130716544" duration="4671000" />
     </task>
     <servers />
   </component>
