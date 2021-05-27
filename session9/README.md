@@ -9,10 +9,8 @@
   - [64. Tip: ¿No puedes construir un Dockerfile porque no tienes Docker instalado?](#64-tip-no-puedes-construir-un-dockerfile-porque-no-tienes-docker-instalado)
   - [65. Escribe manifiestos de Kubernetes para desplegar tu aplicación](#65-escribe-manifiestos-de-kubernetes-para-desplegar-tu-aplicacin)
   - [66. Aprender a consumir el servicio que creaste](#66-aprender-a-consumir-el-servicio-que-creaste)
-  - [67. Nota: ¿No puedes ver el servicio Backend?](#67-nota-no-puedes-ver-el-servicio-backend)
   - [68. Empieza a escribir el cliente JavaScript que consumirá tu Backend en Go](#68-empieza-a-escribir-el-cliente-javascript-que-consumir-tu-backend-en-go)
   - [69. Despliega una nueva versión de tu BackEnd para resolver errores en el FrontEnd](#69-despliega-una-nueva-versin-de-tu-backend-para-resolver-errores-en-el-frontend)
-  - [70. Valida que tu servicio Front esté funcionando como debería](#70-valida-que-tu-servicio-front-est-funcionando-como-debera)
   - [71. Crea los manifiestos de k8s para desplegar tu servicio Front](#71-crea-los-manifiestos-de-k8s-para-desplegar-tu-servicio-front)
   - [72. Crea un Dockerfile para tu aplicación en JavaScript](#72-crea-un-dockerfile-para-tu-aplicacin-en-javascript)
   - [73. Tip: ¿No puedes construir un Dockerfile porque no tienes Docker instalado?](#73-tip-no-puedes-construir-un-dockerfile-porque-no-tienes-docker-instalado)
@@ -120,7 +118,10 @@ Kubernetes se encargará de descargar esta imagen para que puedas usarla :)
   * Why we need `eval $(minikube docker-env)` ? [minikube problem](https://github.com/leone2016/usrv_node/blob/master/seccion-04/minikubeproblem.md)
 
 
- #### :stop_sign: Si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s :rotating_light:
+ #### :stop_sign: kube-proxy error CrashLoopBackOff
+
+Si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s :rotating_light:
+
 ```console
  kubectl get pod,svc -n kube-system
  
@@ -270,28 +271,105 @@ minikube ip
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
-## 67. Nota: ¿No puedes ver el servicio Backend?
-
-**[⬆ volver arriba](#tabla-de-contenidos)**
-
 ## 68. Empieza a escribir el cliente JavaScript que consumirá tu Backend en Go
+F R O N T E N D
+```console
+cd session9
+mkdir frontend
+mkdir frontend/src
+touch frontend/src/index.html
+```
+
+
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
 ## 69. Despliega una nueva versión de tu BackEnd para resolver errores en el FrontEnd
+B A C K E N D____UPDATE
+
+se agrego `access-control-allow-origin`
+validar funcionamiento previo a compilar [kube-proxy](#stop_sign-kube-proxy-error-crashloopbackoff)
+```console
+cd backend
+docker build -t k8s-hands-on -f Dockerfile .
+kubectl get deployments
+
+    NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+    backend-k8s-hands-on   3/3     3            3           51m
+
+kubectl rollout restart deployment backend-k8s-hands-on 
+```
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
-## 70. Valida que tu servicio Front esté funcionando como debería
-
-**[⬆ volver arriba](#tabla-de-contenidos)**
 
 ## 71. Crea los manifiestos de k8s para desplegar tu servicio Front
+```console
+cd session9/frontend
+touch Dockerfile
+touch frontend.yaml
 
+```
+
+```yaml
+
+## kubectl api-resources permite entender lo que va en el yaml
+# DEPLOYMENT
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-k8s-hands-on
+  labels:
+    app: frontend # label del deployment
+# REPLICASET
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend # label que el replica set va utilizar para encontrar a los pods
+  # POD
+  template:
+    metadata:
+      labels:
+        app: frontend # debe ser igual a matchLabels -> app del replicaset
+    spec:
+      containers:
+        - name: frontend
+          image: frontend-k8s-hands-on # por defecto docker va traa=tar de desargar la imagen de docker hub
+          imagePullPolicy: IfNotPresent
+---
+# SERVICE
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-k8s-hands-on
+  labels:
+    app: frontend
+spec:
+  type: NodePort
+  selector:
+    app: frontend # label que utilizar para observar los pods
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80 # esto se puede eliminar ya que por defecto es 80
+
+```
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
 ## 72. Crea un Dockerfile para tu aplicación en JavaScript
 
+creación de imagen 
+```console
+cd session9/frontend
+eval $(minikube docker-env)
+docker build -t frontend-k8s-hands-on -f Dockerfile .
+kubectl apply -f  frontend.yaml
+
+kubectl get deployments
+kubectl rollout restart deployment  frontend-k8s-hands-on 
+
+```
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
 ## 73. Tip: ¿No puedes construir un Dockerfile porque no tienes Docker instalado?
@@ -301,17 +379,3 @@ minikube ip
 ## 74. Despliega los servicios y valida su funcionamiento
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
-
-
-### Creation Container
-   
-* 
-
-### Creacion de deploy a partir de la imagen local
-
-* por defecto la imagen que trata de montar kubernetes es desde dockerHub, por lo que 
-es necesario utilizar 
-* lo que quiere decir imagePullPolicy es que si la imagen no se encuentra en el local, entonces DESCARGA de docker hub   
-* `` 
-
-*`` 

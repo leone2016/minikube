@@ -1,0 +1,20 @@
+<h1>HELLO WORLD</h1>
+<div id="id01"></div>
+
+<img src="https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg" alt="">
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "http://192.168.49.2:31331";
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var resp = JSON.parse(this.responseText);
+            console.log(resp)
+            document.getElementexitById("id01").innerHTML = `<h2>La hora es: ${resp['tiempo']} y el host name es: ${resp["host_name"]}</h2>`;
+
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+</script>

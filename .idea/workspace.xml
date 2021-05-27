@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53cd7fa0-076e-4c57-955c-472361e0a3cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/session9/frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/session9/frontend/frontend.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/session9/frontend/src/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/moderation-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/session9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/session9/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/session9/backend/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/session9/backend/src/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../usrv_node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/event-bus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/event-bus/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/comments-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/comments-depl.yaml" afterDir="false" />
@@ -88,7 +95,7 @@
       <workItem from="1622020880351" duration="3679000" />
       <workItem from="1622035438651" duration="1412000" />
       <workItem from="1622113597348" duration="11418000" />
-      <workItem from="1622130716544" duration="5347000" />
+      <workItem from="1622130716544" duration="9876000" />
     </task>
     <servers />
   </component>

@@ -22,8 +22,8 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
         http.NotFound(w, r )
         return
     }
-    w.WriteHeader(http.StatusOK)
     w.Header().Set("Content-Type", "application/json")
+    w.Header().Set("Access-Control-Allow-Origin", "*")
     resp := HandsOn{
         Time:   time.Now(),
         HostName: os.Getenv("HOSTNAME"),

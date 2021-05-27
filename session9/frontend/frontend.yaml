@@ -1,0 +1,40 @@
+## kubectl api-resources permite entender lo que va en el yaml
+# DEPLOYMENT
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-k8s-hands-on
+  labels:
+    app: frontend # label del deployment
+# REPLICASET
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend # label que el replica set va utilizar para encontrar a los pods
+  # POD
+  template:
+    metadata:
+      labels:
+        app: frontend # debe ser igual a matchLabels -> app del replicaset
+    spec:
+      containers:
+        - name: frontend
+          image: frontend-k8s-hands-on # por defecto docker va traa=tar de desargar la imagen de docker hub
+          imagePullPolicy: IfNotPresent
+---
+# SERVICE
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-k8s-hands-on
+  labels:
+    app: frontend
+spec:
+  type: NodePort
+  selector:
+    app: frontend # label que utilizar para observar los pods
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80 # esto se puede eliminar ya que por defecto es 80
