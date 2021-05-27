@@ -120,7 +120,7 @@ Kubernetes se encargará de descargar esta imagen para que puedas usarla :)
   * Why we need `eval $(minikube docker-env)` ? [minikube problem](https://github.com/leone2016/usrv_node/blob/master/seccion-04/minikubeproblem.md)
 
 
- #### :stop_sign: si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s
+ #### :stop_sign: Si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s :rotating_light:
 ```console
  kubectl get pod,svc -n kube-system
  
@@ -165,7 +165,7 @@ cat /proc/sys/net/netfilter/nf_conntrack_max
 
 `minikube start`
 
-> continuar si no tienen error en el pod de proxy de kubelet
+> :warning: continuar si no tienen error en el pod de proxy de kubelet
 
 ```console
 cd ../../backend
@@ -266,10 +266,7 @@ minikube ip
   ```
 * Coloca la `IP:NodePort` como url en el código JS 
 
-### http://192.168.49.2:31331 <--  RESULTADO
-
-
-
+### http://192.168.49.2:31331 :arrow_left:  RESULTADO
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
