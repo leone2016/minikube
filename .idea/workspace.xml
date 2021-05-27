@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53cd7fa0-076e-4c57-955c-472361e0a3cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/session9/img.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/session9/printScreen/seccion9-intro.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../usrv_node/seccion-04/infra/k8s/moderation-depl.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -93,7 +92,7 @@
       <workItem from="1622020880351" duration="3679000" />
       <workItem from="1622035438651" duration="1412000" />
       <workItem from="1622113597348" duration="11418000" />
-      <workItem from="1622130716544" duration="4671000" />
+      <workItem from="1622130716544" duration="4988000" />
     </task>
     <servers />
   </component>

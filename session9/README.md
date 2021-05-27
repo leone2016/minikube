@@ -119,8 +119,8 @@ Kubernetes se encargará de descargar esta imagen para que puedas usarla :)
 * ### paso 8: crear la imagen, si aun no se a creado
   * Why we need `eval $(minikube docker-env)` ? [minikube problem](https://github.com/leone2016/usrv_node/blob/master/seccion-04/minikubeproblem.md)
 
-:stop_sign:
- #### si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s
+
+ #### :stop_sign: si al ejecutar el siguiente comando da error (CrashLoopBackOff) en el pods de pod/kube-proxy-r445s
 ```console
  kubectl get pod,svc -n kube-system
  
